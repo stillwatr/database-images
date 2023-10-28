@@ -14,4 +14,4 @@ RUN apt-get update && apt-get install -y build-essential git postgresql-server-d
 RUN git clone https://github.com/fake-name/pg-spgist_hamming/
 RUN cd pg-spgist_hamming/bktree && make && make install
 
-COPY postgresql+bktree.ubuntu-2204.install-extensions.sh /docker-entrypoint-initdb.d/
+COPY ubuntu-2204.install-extensions.sh /docker-entrypoint-initdb.d/
